@@ -45,8 +45,6 @@ jobs:
         if: runner.os == 'Linux'
         run: |
           ./misc/sampler_test.sh
-      - name: SSH connection to Actions
-        uses: P3TERX/debugger-action@master
       - name: Run LDBC
         if: runner.os == 'Linux'
         run: |
