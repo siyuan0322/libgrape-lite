@@ -27,7 +27,8 @@ jobs:
           chmod 750 $HOME
           echo "StrictHostKeyChecking no" >> ~/.ssh/config
           sudo apt update -y
-          sudo apt install -y libmpich-dev libgoogle-glog-dev libgflags-dev librdkafka-dev cmake maven
+          sudo apt install -y libmpich-dev libgoogle-glog-dev libgflags-dev librdkafka-dev cmake maven openssh-server
+          sudo /etc/init.d/ssh start
       - name: Install Dependencies for macOS
         if: runner.os == 'macOS'
         run: |
